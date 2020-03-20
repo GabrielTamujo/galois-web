@@ -59,6 +59,8 @@ let fulltext = document.getElementsByClassName('prism-editor__code')[0].textCont
 
   response = await response.json();
 
+  console.log(response)
+
   let values = []
   for (let value of response.result){
     values.push({key:text+value, value:text+value})
