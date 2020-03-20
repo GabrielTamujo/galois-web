@@ -44,9 +44,9 @@ var tribute = new Tribute({
 let requestValues = async (text, callback) => {
 let fulltext = document.getElementsByClassName('prism-editor__code')[0].textContent.trimRight("\n");
 
-  let response = await fetch(`${process.env.VUE_APP_BACKEND_API}/api/complete`, {
+  let response = await fetch(`${process.env.VUE_APP_BACKEND_API}/autocomplete`, {
     method: 'POST',
-    // mode: 'no-cors',
+    mode: 'no-cors',
     cache: 'no-cache',
     credentials: 'include',
     headers: {
